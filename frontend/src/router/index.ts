@@ -5,7 +5,7 @@ import DetailsView from '@/views/DetailsView.vue'
 import HistoryInfoView from '@/views/HistoryInfoView.vue'
 import HistoryListView from '@/views/HistoryListView.vue'
 import InferView from '@/views/InferView.vue'
-import StartView from '@/views/StartView.vue'
+import IntroView from '@/views/IntroView.vue'
 import SwaggerView from '@/views/SwaggerView.vue'
 
 const router = createRouter({
@@ -17,8 +17,8 @@ const router = createRouter({
             children: [
                 {
                     path: '',
-                    name: 'start',
-                    component: StartView,
+                    name: 'intro',
+                    component: IntroView,
                 },
                 {
                     path: 'details',

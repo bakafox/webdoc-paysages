@@ -9,7 +9,9 @@ import SideLink from '@/components/SideLink.vue'
 <template>
     <div class="layout">
         <aside>
-            <h2>Классификация<br> пейзажей</h2>
+            <h2 class="title">
+                Классификация<br>пейзажей
+            </h2>
 
             <SideLink link="/">
                 <TextInitial :size="16" />
@@ -46,6 +48,13 @@ import SideLink from '@/components/SideLink.vue'
     .layout {
         flex: 1;
         display: flex; flex-direction: row;
+        max-height: 100vh;
+    }
+
+    .title {
+        /* text-align: center; */
+        /* color: var(--accent-dark) */
+        margin: 16px 0; padding: 0 12px;
     }
 
     aside {

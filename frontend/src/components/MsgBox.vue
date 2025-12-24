@@ -1,36 +1,32 @@
 <script setup lang="ts">
 import type { FormMessage } from '@/types/forms'
 
-const { message } = defineProps<{
-    message: FormMessage | null
+const { msg } = defineProps<{
+    msg: FormMessage | null,
 }>()
 </script>
 
 <template>
-    <div v-show="message !== null" class="msgbox" :class="[message?.variant ?? 'regular']">
-        {{ message?.text ?? '' }}
+    <div v-show="msg !== null" class="msgbox" :class="[msg?.variant]">
+        {{ msg?.text }}
     </div>
 </template>
 
-<style lang="postcss" scoped>
+<style lang="css" scoped>
     .msgbox {
         padding: 8px;
-        border: 1px solid transparent; border-radius: var(--BR-small);
+        border: 1px solid transparent; border-radius: var(--BR-normal);
     }
     .error {
-        background-color: color-mix(in srgb, var(--danger), transparent 80%);
-        color: color-mix(in srgb, var(--danger), var(--white) 80%);
-    }
-    .warning {
-        background-color: color-mix(in srgb, var(--warning), transparent 80%);
-        color: color-mix(in srgb, var(--warning), var(--white) 80%);
+        background-color: color-mix(in srgb, var(--error), var(--white-99) 80%);
+        color: var(--error);
     }
     .success {
-        background-color: color-mix(in srgb, var(--accent-light), transparent 80%);
-        color: color-mix(in srgb, var(--accent-light), var(--white) 80%);
+        background-color: color-mix(in srgb, var(--success), var(--white-99) 80%);
+        color: var(--success);
     }
     .regular {
-        border-color: color-mix(in srgb, var(--white-pale), var(--bg) 60%);
-        color: var(--white-pale);
+        background-color: var(--white-CC);
+        color: color-mix(in srgb, var(--white-CC), var(--black) 80%);
     }
 </style>

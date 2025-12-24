@@ -5,17 +5,22 @@ html {
     --white-33: #fff3;
     --white-55: #fff5;
     --white-99: #fff9;
+    --white-CC: #fffc;
 
     --bg: #59b2c2;
-    --bg-fancy: linear-gradient(in oklab, #38a2b4 20%, #adfafa);
+    /* --bg-fancy: linear-gradient(in oklab, #4abbcf, #adfafa); */
+    --bg-fancy: linear-gradient(in oklab, #74cbdb, #eff);
 
+    --accent-light: #0a86ac;
     --accent: #006b8c;
     --accent-dark: #003444;
-    --danger: #e6241d;
-    --warning: #e6b020;
+    --error: #f54842;
+    --success: #76b82c;
 
     --fonts: system-ui, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Open Sans', sans-serif;
 
     --BR-round: 9999px;
     --BR-normal: 8px;
+
+    --TR-normal: .2s;
 }
